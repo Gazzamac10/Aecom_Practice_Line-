@@ -1,7 +1,7 @@
 import os
 import sqlite3
 
-Path = "C:\\Users\mccarthyg\PycharmProjects\Aecom_PracticeLine\\new_ACM_S_SBM_SP_UEA.txt"
+Path = "C:\\Users\mccarthyg\PycharmProjects\Aecom_Practice_Line-\\new_ACM_S_SBM_SP_UEA.txt"
 
 f = open(Path, 'r')
 a = f.readlines()

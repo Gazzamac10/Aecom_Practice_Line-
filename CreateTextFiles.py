@@ -27,6 +27,7 @@ CFCHStemplateline = ",Diameter##SECTION_PROPERTY##MILLIMETERS,Wall Nominal Thick
 CFCHSindexes = [1,1,4,12,3,6,8,9,10,11]
 
 def CHScreatetextfile(name,ExcelSheet,templateline,indexofparam):
+
     workbook = xlrd.open_workbook(ExcelSheet)
     sheet = workbook.sheet_by_index(0)
 
@@ -40,7 +41,6 @@ def CHScreatetextfile(name,ExcelSheet,templateline,indexofparam):
     row1 = columns[0]
     row2 = columns[1]
     row3 = columns[2]
-
     row2stp = row2[10:len(row2)]
 
     row2len = len([item for item in row2stp if item.strip()])
