@@ -2,6 +2,10 @@ import os
 import xlrd
 
 dir = "C:\Users\mccarthyg\PycharmProjects\Aecom_Practice_Line-"
+
+
+
+
 def SaveoutTxtFile(data,Pathout):
     f = open(Pathout,"w")
     for item in data:
@@ -124,7 +128,7 @@ SP_CFCHSnewlist = [CHScreatetextfile(specialprefix + CFCHSnamelist[i],CFCHSexcel
     #SaveoutTxtFile(SP_CFCHSnewlist[i][1],SP_CFCHSnewpaths[i])
 
 
-"""RHS & SHS"""
+#RHS & SHS
 CFRHSName = "CFRHS"
 CFRHSExcelSheet = dir+"\\CFRHS-secpropsdimsprops-EC3(UKNA)-UK-8-10-2017.xlsx"
 CFRHStemplateline = ",Width##SECTION_PROPERTY##MILLIMETERS,Height##SECTION_PROPERTY##MILLIMETERS,\
@@ -252,7 +256,7 @@ SP_RHSSHSnewlist = [RHSSHScreatetextfile(specialprefix + RHSSHSnamelist[i],RHSSH
     #SaveoutTxtFile(SP_RHSSHSnewlist[i][1],SP_RHSSHSnewpaths[i])
 
 
-"""Universal Beams & Columns"""
+#Universal Beams & Columns
 UCName = "UC"
 UCExcelSheet = dir+"\\UC-secpropsdimsprops-EC3(UKNA)-UK-8-16-2017.xlsx"
 UCtemplateline = ",Width##SECTION_PROPERTY##MILLIMETERS,Height##SECTION_PROPERTY##MILLIMETERS,\
@@ -372,7 +376,7 @@ SP_UCUBnewlist = [UCUBcreatetextfile(specialprefix + UCUBnamelist[i],UCUBexcelsh
     #SaveoutTxtFile(SP_UCUBnewlist[i][1],SP_UCUBnewpaths[i])
 
 
-"""Equal Angle (needs units checking)"""
+#Equal Angle (needs units checking)
 EAName = "EA"
 EAExcelSheet = dir+"\\L-equal-secpropsdimsprops-EC3(UKNA)-UK-10-5-2017.xlsx"
 EAtemplateline = ",Width##SECTION_PROPERTY##MILLIMETERS,Height##SECTION_PROPERTY##MILLIMETERS,\
@@ -621,4 +625,4 @@ SP_UEAnewlist = [UEAcreatetextfile(specialprefix + UEAnamelist[i],UEAexcelsheetl
 #for i in range(len(SP_UEAnewlist)):
    #SaveoutTxtFile(SP_UEAnewlist[i][1],SP_UEAnewpaths[i])
 
-
+"""
