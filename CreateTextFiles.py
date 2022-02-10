@@ -1,16 +1,14 @@
 import os
 import xlrd
 
-dir = "C:\Users\mccarthyg\PycharmProjects\Aecom_Practice_Line-"
-
-
-
+dir = "C:\\Users\\mccarthyg\\PycharmProjects\\Aecom_Practice_Line-"
 
 def SaveoutTxtFile(data,Pathout):
     f = open(Pathout,"w")
     for item in data:
         f.write("%s\n" % item)
     f.close()
+
 AecomFamilyPrefix = "_ACM_S_SBM_"
 specialprefix = "SP_"
 
@@ -113,6 +111,9 @@ CFCHSexcelsheetlist = [CFCHSExcelSheet]
 CFCHStemplatelist = [CFCHStemplateline]
 CFCHSindexlist = [CFCHSindexes]
 
+
+
+"""
 CFCHSnewpaths = [dir + "\\" + AecomFamilyPrefix + str(CFCHSnamelist[i] + ".txt")for i in range(len(CFCHSnamelist))]
 CFCHSnewlist = [CHScreatetextfile(CFCHSnamelist[i],CFCHSexcelsheetlist[i],CFCHStemplatelist[i], \
                                   CFCHSindexlist[i])for i in range(len(CFCHSnamelist))]
@@ -123,11 +124,16 @@ CFCHSnewlist = [CHScreatetextfile(CFCHSnamelist[i],CFCHSexcelsheetlist[i],CFCHSt
 SP_CFCHSnewpaths = [dir + "\\" + AecomFamilyPrefix + specialprefix + str(CFCHSnamelist[i] + ".txt")for i in range(len(CFCHSnamelist))]
 SP_CFCHSnewlist = [CHScreatetextfile(specialprefix + CFCHSnamelist[i],CFCHSexcelsheetlist[i],CFCHStemplatelist[i], \
                                   CFCHSindexlist[i])for i in range(len(CFCHSnamelist))]
+"""
+
 
 #for i in range(len(SP_CFCHSnewlist)):
     #SaveoutTxtFile(SP_CFCHSnewlist[i][1],SP_CFCHSnewpaths[i])
 
 
+
+
+"""
 #RHS & SHS
 CFRHSName = "CFRHS"
 CFRHSExcelSheet = dir+"\\CFRHS-secpropsdimsprops-EC3(UKNA)-UK-8-10-2017.xlsx"
@@ -501,7 +507,7 @@ SP_EAnewlist = [EAcreatetextfile(specialprefix + EAnamelist[i],EAexcelsheetlist[
     #SaveoutTxtFile(SP_EAnewlist[i][1],SP_EAnewpaths[i])
 
 
-"""Unequal Angle (needs units checking)"""
+#Unequal Angle (needs units checking)
 UEAName = "UEA"
 UEAExcelSheet = dir+"\\L-unequal-secpropsdimsprops-EC3(UKNA)-UK-10-6-2017.xlsx"
 UEAtemplateline = ",Width##SECTION_PROPERTY##MILLIMETERS,Height##SECTION_PROPERTY##MILLIMETERS,\
